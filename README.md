@@ -2,14 +2,14 @@
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)]()
 ![Status](https://img.shields.io/badge/Status-Active-success)
 
-Program sederhana untuk menghitung dan memvisualisasikan Parameter Tisserand terhadap beberapa planet (Merkurius hingga Saturnus). Kode ini menggunakan metode Newton–Raphson untuk menyelesaikan persamaan karakteristik dan menghasilkan kurva hubungan:
+Ini adalah program sederhana untuk menghitung dan memvisualisasikan Parameter Tisserand untuk beberapa planet (Merkurius hingga Saturnus). Program ini menggunakan metode Newton–Raphson untuk menyelesaikan persamaan terkait dan menghasilkan kurva hubungan antara :
 
 - Semi-major axis (a)
 - Eksentrisitas (e)
 - Parameter Tisserand (Tₚ)
 
 ## Teori Singkat:
-Parameter Tisserand relatif terhadap suatu planet dengan sumbu semi-mayor aₚ) dirumuskan sebagai:
+Parameter Tisserand relatif terhadap sebuah planet (dengan sumbu semi-mayor aₚ) didefinisikan sebagai:
 
 ```math
 T_p = \frac{a_p}{a} + 2\cos{i}\sqrt{\frac{a}{a_p}(1 - e^2)}
