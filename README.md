@@ -9,7 +9,7 @@ Kode ini menggunakan metode Newton–Raphson untuk menyelesaikan persamaan karak
 - Eksentrisitas (e)
 - Parameter Tisserand (Tₚ)
 
-## Teori Singkat: Parameter Tisserand
+## Teori Singkat:
 Parameter Tisserand relatif terhadap suatu planet dengan sumbu semi-mayor aₚ) dirumuskan sebagai:
 
 ```math
@@ -17,9 +17,9 @@ T_p = \frac{a_p}{a} + 2\cos{i}\sqrt{\frac{a}{a_p}(1 - e^2)}
 ```
 dengan:
 - a   : sumbu semi-mayor benda kecil
+- aₚ  : sumbu semi-mayor planet
 - e   : eksentrisitas orbit
 - i   : inklinasi
-- aₚ  : sumbu semi-mayor planet
 
 ## Fitur
 - Menghitung nilai akar menggunakan metode Newton–Raphson
@@ -27,18 +27,20 @@ dengan:
 - Nilai parameter dapat dimodifikasi (Tₚ, inklinasi, rentang eksentrisitas)
 
 ## Struktur Folder
-tisserand-analysis/
+```bash
+tisserand-parameter/
 ├── src/
-│ └── tisserand_plotter.py
+│   └── tisserand_plotter.py
 ├── README.md
 └── requirements.txt
+```
 
 ## Cara Menjalankan
 
 1. Clone repository berikut:  
    ```bash
-   git clone https://github.com/USERNAME/tisserand-analysis.git
-   cd tisserand-analysis
+   git clone https://github.com/LHanum-archieve/tisserand-parameter.git
+   cd tisserand-parameter
 2. Install dependensi:
    ```bash
    pip install -r requirements.txt
