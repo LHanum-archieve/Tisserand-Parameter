@@ -34,7 +34,7 @@ dengan:
 ```bash
 tisserand-parameter/
 ├── src/
-│   └── tisserand_plotter.py
+│   └── tisserand-newton-raphson.py
 ├── README.md
 └── requirements.txt
 ```
