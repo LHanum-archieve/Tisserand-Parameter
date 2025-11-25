@@ -2,10 +2,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 import math
 
-
-# 1. Newton–Raphson Method
+# 1. Metode Newton–Raphson
 def newton_raphson_method(func, dfunc, initial_guess, tolerance=1e-6, max_iterations=100):
-    """Implementasi metode Newton–Raphson untuk mencari akar fungsi."""
     x = initial_guess
     for _ in range(max_iterations):
         f_val = func(x)
@@ -17,7 +15,7 @@ def newton_raphson_method(func, dfunc, initial_guess, tolerance=1e-6, max_iterat
 # 2. Parameter Input
 TISSERAND_PARAM = 3        # Nilai T_p
 INCLINATION_DEG = 0        # Inklinasi orbit (derajat)
-COS_I = math.cos(math.radians(INCLINATION_DEG))
+COS_I           = math.cos(math.radians(INCLINATION_DEG))
 
 # Sumbu semi-mayor planet (AU)
 PLANET_A = {
@@ -33,8 +31,6 @@ E_VALUES = np.linspace(0, 0.6, 6000)
 
 # 3. Equation Solver untuk x menggunakan Newton-Raphson
 def compute_x_values(T_p, cos_i, e):
-    """Menyelesaikan persamaan karakteristik menggunakan Newton-Raphson."""
-
     def equation(x):
         return 2 * cos_i * x**3 - T_p * x**2 + (1 - e**2)
 
@@ -48,7 +44,6 @@ def compute_x_values(T_p, cos_i, e):
 
 # 4. Plotting Per Planet
 def plot_per_planet(a_planet, planet_name, color):
-    """Memplot grafik Tisserand untuk satu planet."""
     a1_results = []
     a2_results = []
 
@@ -72,7 +67,6 @@ def plot_per_planet(a_planet, planet_name, color):
 
 # 5. Plot Gabungan Semua Planet
 def plot_combined(all_a1, all_a2, labels, colors):
-    """Memplot seluruh kurva Tisserand dalam satu grafik."""
     plt.figure(figsize=(10, 6))
 
     for idx in range(len(all_a1)):
